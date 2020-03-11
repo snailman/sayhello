@@ -11,7 +11,7 @@ from flask_moment import Moment
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask('sayhello')
-app.config.from_pyfile('settings.py')
+app.config.from_pyfile('settings.py')  #config对象的from_pyfile()方法加载配置
 app.jinja_env.trim_blocks = True
 app.jinja_env.lstrip_blocks = True
 
