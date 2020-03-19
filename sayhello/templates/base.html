@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!--让网页的宽度自动适应手机屏幕的宽度-->
     <title>{% block title %}Say Hello!{% endblock %}</title>
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
 </head>
 <body>
-<main class="container">
+<main class="container">  <!--定义文档主要内容//规定元素的一个或多个类名（引用样式表中的类）class 属性大多数时候用于指向样式表中的类（class）-->
     <header>
         <h1 class="text-center display-4">
             <a href="{{ url_for('index') }}" class="text-success"><strong>Say Hello</strong></a>
@@ -23,7 +23,7 @@
         </div>
     {% endfor %}
     {% block content %}{% endblock %}
-    <footer class="text-center">
+    <footer class="text-center">            <!--footer:定义页脚标签-->
         {% block footer %}
             <small> &copy; 2018 <a href="http://greyli.com" title="Written by Grey Li">Grey Li</a> /
                 <a href="https://github.com/greyli/sayhello" title="Fork me on GitHub">GitHub</a> /
@@ -33,7 +33,7 @@
         {% endblock %}
     </footer>
 </main>
-
+<!--Bootstrap所依赖的jQuery和Popper.js需要单独下载，这三个javascript文件在引入时要按照 jQuery--Popper.js--Bootstrap的顺序引入-->
 <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.2.1.slim.min.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>

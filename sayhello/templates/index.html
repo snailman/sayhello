@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% from 'bootstrap/form.html' import render_form %}
-
+<!--Bootstrap-Flask提供的表单渲染宏通过其内置的bootstrap/form.html模板导入,render_form()宏,使用起来非常简单.使用一行代码就可以渲染整个表单,而且会自动帮我们渲染CSRF令牌字段form.csrf_token.-->
 {% block content %}
     <div class="hello-form">
         {{ render_form(form, action=request.full_path) }}
